@@ -1,0 +1,190 @@
+body{
+  background-color: var(--body-color);
+}
+:root{
+  --note-color: yellow;
+  --title-color: #fff;
+  --navbar-color: navy;
+  --font-color: navy;
+  --body-color: #fff;
+  --theme-color: #000000be;
+  --modalbutton-color: navy;
+}
+.dark-theme{
+  --note-color: #00000075;
+  --title-color: #39FF14;
+  --navbar-color: #000000be;
+  --font-color: #39FF14;
+  --body-color: #000000be;
+  --theme-color: #fff;
+  --modalbutton-color: #000000be;
+}
+.navbar{
+  width: 100%;
+  display: flex;
+  background-color: var(--navbar-color);
+  height: 80px;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 25;
+}
+.title{
+  font-weight: bolder;
+  color: var(--title-color);
+  font-size: 40px;
+  text-align: left;
+  padding: 1vw 5vw;
+}
+.addnotes{
+  display: inline;
+  background: var(--title-color);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--navbar-color);
+  color: var(--navbar-color);
+  margin-top: 1.6vw;
+  margin-right: 5vw;
+  font-size: 32px;
+}
+.theme{
+  display: inline;
+    background-color: var(--theme-color);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--title-color);
+    margin-top: 1.5vw;
+    margin-right: 5vw;
+    font-size: 27.5px;
+  }
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--font-color); 
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+}
+.modal textarea{
+  background: var(--body-color);
+  color: var(--font-color);
+}
+#modaltitle{
+  color: var(--modalbutton-color);
+}
+.close, .save, .update {
+  justify-content: center;
+  padding: 8px;
+  width: 100px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.modal button{
+  background-color: var(--modalbutton-color);
+  color: var(--title-color);
+  border: 1px solid #fff;
+}
+#modaloption button{
+  margin: 20px;
+}
+.inputtitle, .updatetitle{
+  font-size: large; 
+  color: var(--font-color);
+  resize: none;
+  border: 0;
+}
+.inputnote, .updatenote{
+  height: 100px;
+  font-size: large;
+  color: var(--font-color);
+  resize: none;
+  background: transparent;
+  border: 0;
+}
+
+#titleborder, #contentborder{
+padding: 5px;
+border-radius: 10px;
+border: 1px solid var(--font-color);
+margin-bottom: 10px;
+}
+
+.notes-container{
+  padding-top: 70px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: space-around;
+}
+.notesdoc{
+  height: 230px;
+  width: 240px;
+  margin-top: 15%;
+  border-radius: 10%;
+  background-color: var(--note-color);
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+}
+.notesdoc p{
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px 5px;
+  height: 90px;
+  font-size: 16px;
+}
+.optbar p{
+ margin-top: 5px;
+}
+.optbar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.optbar button{
+  width: 35px;
+  height: 30px;
+  padding: 0px;
+  text-align: center;
+  background-color: var(--body-color);
+  border: 1px solid var(--font-color);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1250px) {
+  .notes-container{
+      grid-template-columns: auto auto auto auto;
+  }
+}
+@media screen and (max-width: 912px) {
+  .notes-container{
+      grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  .notes-container{
+      grid-template-columns: auto auto;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .notes-container{
+      grid-template-columns: auto;
+  }
+  }
+
